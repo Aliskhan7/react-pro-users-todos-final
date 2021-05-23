@@ -3,10 +3,11 @@ import {useSelector} from "react-redux";
 import User from './User';
 
 function Users(props) {
-    const users = useSelector(state=> state.users)
+    const users = useSelector(state=> state.users.users)
+
 
     return(
-        <div className='users'>
+        <div className={`users`}>
             <ul>
                 {users.map(user =>{
                     return <User user={user} key={user.id}/>

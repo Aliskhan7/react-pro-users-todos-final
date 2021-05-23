@@ -13,6 +13,10 @@ html, body{
     width: 100%;
 }
 
+.selected{
+    background: aliceblue;
+}
+
 .users ul li, .alboms ul li{
     padding: 10px;
     list-style: none;

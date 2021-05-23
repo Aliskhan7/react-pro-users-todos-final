@@ -8,8 +8,8 @@ import '../main.css'
 
 function App(){
     const dispatch = useDispatch()
-    const loadingUsers = useSelector(state => state.loadingUsers)
-    const loadingAlboms = useSelector(state => state.loadingAlboms)
+    const loadingUsers = useSelector(state => state.users.loading)
+    const loadingAlboms = useSelector(state => state.alboms.loading)
 
     useEffect(() =>{
         dispatch(loadUsers());

@@ -1,17 +1,23 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {selectUser} from "../redux/actions";
+import {style} from "redux-logger/src/diff";
 
 
 function User(props) {
     const dispatch = useDispatch()
 
+    const selected = useSelector(state => state.users.selectedUserId)
+
     const handleSelectUser = () =>{
-        dispatch(selectUser(props.user.id))
+        dispatch(selectUser(props.user.id));
+
     }
 
+
+
     return(
-        <li onClick={handleSelectUser}>
+        <li onClick={handleSelectUser} className={selected === props.user.id ? 'selected' : ''}>
             <div className='user-name'>
                 {props.user.name}
             </div>

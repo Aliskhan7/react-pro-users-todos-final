@@ -5,9 +5,9 @@ import {setFiltered} from "../redux/actions";
 
 function Alboms(props){
     const dispatch = useDispatch();
-    const alboms = useSelector(state => state.alboms);
-    const selectedUserId = useSelector(state => state.selectedUserId);
-    const filter = useSelector(state => state.filter);
+    const alboms = useSelector(state => state.alboms.alboms);
+    const selectedUserId = useSelector(state => state.users.selectedUserId);
+    const filter = useSelector(state => state.alboms.filter);
 
     const filteredAlboms = alboms
         .filter(albom => albom.userId === selectedUserId)
