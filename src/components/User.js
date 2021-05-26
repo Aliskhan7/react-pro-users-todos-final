@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {selectUser} from "../redux/actions";
 import {style} from "redux-logger/src/diff";
-import {Link, useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 
 
 function User(props) {
@@ -10,14 +10,14 @@ function User(props) {
 
     return(
         <li className={id ? 'selected' : ''}>
-            <Link to={`${props.user.id}`}>
+            <NavLink className='link-list' activeClassName='active' to={`${props.user.id}`}>
                 <div className='user-name'>
                     {props.user.name}
                 </div>
                 <div className='user-email'>
                     {props.user.email}
                 </div>
-            </Link>
+            </NavLink>
         </li>
     )
 }
