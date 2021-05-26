@@ -25,12 +25,6 @@ export const loadAlboms = () =>{
             })
     }
 }
-export const selectUser = (userId) =>{
-    return{
-        type: "user/select",
-        payload: userId
-    }
-}
 export const setFiltered = (text) =>{
     return{
         type: 'filter/set',

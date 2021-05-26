@@ -5,7 +5,6 @@ import User from './User';
 function Users(props) {
     const users = useSelector(state=> state.users.users)
 
-
     return(
         <div className={`users`}>
             <ul>

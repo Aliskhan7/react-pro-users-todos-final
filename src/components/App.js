@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {loadAlboms, loadUsers} from "../redux/actions";
 import ReactLoading from 'react-loading';
+import {Route} from 'react-router-dom';
 import '../main.css'
 
 function App(){
@@ -26,7 +27,9 @@ function App(){
     return(
         <div className='container'>
             <Users/>
-            <Alboms/>
+            <Route path='/:id?'>
+                <Alboms/>
+            </Route>
         </div>
     )
 }
